@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+        <script>
+            function checkForm()
+            {
+                var FName;
+                FName = document.getElementById("fName").value;
+                if(FName == "")
+                {
+                    document.getElementById("fName").style.backgroundColor = "red";
+                    document.getElementById("fName").focus();
+                }
+                else
+                {
+                    document.getElementById("fName").style.backgroundColor = "white";
+                }
+
+                var LName;
+                LName = document.getElementById("lName").value;
+                if(LName == "")
+                {
+                    document.getElementById("lName").style.backgroundColor = "red";
+                    document.getElementById("lName").focus();
+                }
+                else
+                {
+                    document.getElementById("lName").style.backgroundColor = "white";
+                }
+
+                var Email;
+                Email = document.getElementById("emailAddress").value;
+                if(Email == "")
+                {
+                    document.getElementById("emailAddress").style.backgroundColor = "red";
+                    document.getElementById("emailAddress").focus();
+                }
+                else
+                {
+                    document.getElementById("emailAddress").style.backgroundColor = "white";
+                }
+
+                var Agreement;
+                Agreement = document.getElementById("checkYes").checked;
+                if(Agreement == "")
+                {
+                    window.alert("Please accept the Terms of Agreement.");
+                }
+                else
+                {
+                    document.getElementById("checkYes").style.backgroundColor = "white";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="font-family: Lucida Handwriting, cursive;">Contact Us</h1>
+        
+            First name: <input type="text" id="fName"><br>
+            Last Name: <input type="text" id="lName"><br>
+            Email Address: <input type="text" id="emailAddress"><br>
+            <h6>Do you accept the Terms of Agreement?</h6>
+            <input type="checkbox" name="yes" value="yes" id="checkYes">yes<br>
+            <input type="checkbox" name="no" value="no" id="checkNo">no<br>
+            <button id="btnSubmit" onClick="checkForm()">Submit</button>
+        <br>
+        <br>
+        <a href="homepage.html">Homepage</a>
+        <a href="Page2.html">Page Two</a>
+    </body>
+</html>
